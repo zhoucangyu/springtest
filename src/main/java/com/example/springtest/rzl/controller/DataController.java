@@ -2,10 +2,9 @@ package com.example.springtest.rzl.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.example.springtest.rzl.bean.Data;
-import com.example.springtest.rzl.bean.Info;
+import com.example.springtest.rzl.bean.Result;
 import com.example.springtest.rzl.bean.Pager;
 import com.example.springtest.rzl.service.DataService;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -21,12 +20,12 @@ public class DataController {
 
         Pager<Data> pager = dataService.findByPager(page, size);
 
-        Info info = new Info();
-        info.setCode(Info.SUCCESS);
-        info.setMessage("SUCCESS");
-        info.setData(pager.getRows().get(0).getId());
+        Result result = new Result();
+        result.setCode(Result.SUCCESS);
+        result.setMessage("SUCCESS");
+        result.setData(pager.getRows().get(0).getId());
 
-        return JSON.toJSONString(info);
+        return JSON.toJSONString(result);
 
     }
 }

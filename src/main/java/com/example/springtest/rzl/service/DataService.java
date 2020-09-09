@@ -3,6 +3,7 @@ package com.example.springtest.rzl.service;
 import com.example.springtest.rzl.bean.Data;
 import com.example.springtest.rzl.bean.Pager;
 import com.example.springtest.rzl.dao.DataDao;
+import org.apache.ibatis.plugin.Interceptor;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

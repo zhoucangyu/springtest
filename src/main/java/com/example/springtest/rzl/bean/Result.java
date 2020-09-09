@@ -1,6 +1,6 @@
 package com.example.springtest.rzl.bean;
 
-public class Info {
+public class Result {
     public static final int SUCCESS = 1;
     public static final int FAILURE = 0;
     private int code;
